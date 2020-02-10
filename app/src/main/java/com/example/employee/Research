@@ -1,0 +1,71 @@
+1. Define the following thread synchronization approaches:
+
+- Locks
+
+    - A space location lock puts a logical lock on any single byte of storage. The lock does not change
+      the storage or effect your application's access to the storage. The lock is a piece of info
+      recorded by the system. Object locks provide ways to acquire locks on specific systems or
+      application objects.
+
+- Mutex
+
+    - A mutual exclusion (mutex) is used cooperatively between threads to ensure that only one of the
+      cooperating threads is allowed to access the data or run certain application code at a time.
+
+
+- Semaphores
+
+    - Semaphores (sometimes referred to as counting semaphores) can be used to control access to
+      shared resources. A semaphore can be thought of as an intelligent counter. Every semaphore has
+      a current count, which is greater than or equal to 0.
+
+
+- Synchronized
+
+    - synchronizes the value of all variables between the thread memory and the main memory and
+      locks and releases a monitor to control the ownership between multiple threads
+
+- Volatile
+
+    - volatile only synchronizes the value of one variable between the thread memory and the main memory
+
+
+- Atomic
+
+    - Atomic primitives provide mutating functions for their underlying primitive value, that are all
+      atomic and thread-safe
+
+
+2. Define Deadlock conditions.
+
+    - Deadlock exists is and only if these 4 conditions happen at same time:
+      a.mutual exclusion: at least one process must be held in a non-sharable mode.
+      b. hold and wait: there must be a process holding one resource and waiting for another.
+      c. No preemption: resources cannot be preempted.
+      d. circular wait: there must exist a set of processe
+
+                 [p1, p2, p3, pn] such that p1 is waiting for p2, p2 for p3, and so on
+
+3. Define Race conditions.
+
+    - occur when two threads interact in a negatve (buggy) way depending on the exact order that
+      their different instructions are executed. A race condition occurs when two threads access a
+      shared variable at the same time. he first thread reads the variable, and the second thread reads
+      the same value from the variable. Then the first thread and second thread perform their
+      operations on the value, and they race to see which thread can write the value last to the
+      shared variable. The value of the thread that writes its value last is preserved, because the
+      thread is writing over the value that the previous thread wrote.
+
+4. What is a memory leak?
+
+    - A memory leak is is a type of resource leak that occurs when a computer program incorrectly
+      manages memory allocations in such a way that memory which is no longer needed is not released.
+      A memory leak may also happen when an object is stored in memory but cannot be accessed by the
+      running code. A memory leak is the gradual loss of available computer memory when a program
+      (an application or part of the operating system) repeatedly fails to return memory that it has
+      obtained for temporary use.
+
+5. What is an ANR and what are some common causes?
+
+- Application Non Responsive:  Caused when an activity is unresponsive for more than 5 seconds or a broadcast receiver
+  is unresponsive for 10 seconds
